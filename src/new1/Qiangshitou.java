@@ -2,11 +2,11 @@ package new1;
 
 public class Qiangshitou {
 	public static void main(String[] aw) {
-		int[] p= {3,9,1,2};
+		int[] p= {1,5,2,4,6};
 		System.out.print(game(p));
 	} 
 	
-public static int game(int[] p) {
+public static boolean game(int[] p) {
 	int n=p.length;
 
 	int[][][] dp=new int[n][n][2];
@@ -39,7 +39,7 @@ public static int game(int[] p) {
 			}
 	}
 	
-return dp[0][n-1][1]-dp[0][n-1][0];	
+return dp[0][n-1][1]<dp[0][n-1][0];
 }	
 
 }

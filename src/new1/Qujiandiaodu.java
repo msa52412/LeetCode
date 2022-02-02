@@ -20,12 +20,19 @@ public class Qujiandiaodu {
 	
 
 	public static int getnum(int[][] inter) {
+		if (inter.length==0) return 0;
 		Arrays.sort(inter, new Comparator<int[]>() {
 
 			@Override
-			public int compare(int[] o1, int[] o2) {
+			public int compare(int[] a, int[] b) {
 				// TODO 自动生成的方法存根
-				return o1[1]-o2[1];
+				if (a[1]>b[1]){
+					return 1;
+				}
+				else if(a[1]==b[1]){
+					return 0;
+				}
+				else return -1;
 			}
 			
 			
