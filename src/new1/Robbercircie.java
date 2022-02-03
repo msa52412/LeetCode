@@ -1,28 +1,34 @@
 package new1;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Robbercircie {
-    static int getmoney(int[] a){
-        int all=a.length;
 
-        int dp_0=0,dp_1=a[0],dp=-1;
+    static int getcircle(int[] a){
+
+        int all=a.length-1;
+        if(all==0) return a[0];
+        if(all==1) return Math.max(a[0],a[1]);
+        int dp_0=0,dp_1=a[0],max1=-1;
         for(int i=2;i<=all;i++){
-            dp=Math.max(dp_1,dp_0+a[i-1]);
+            max1=Math.max(dp_1,dp_0+a[i-1]);
             dp_0=dp_1;
-            dp_1=dp;
+            dp_1=max1;
 
         }
-        return dp;
-    }
-    static int getcircle(int[] b){
-        int c[] = new int[b.length-1];
-        for (int i=1;i<b.length;i++){
-            c[i-1]=b[i];
+        all+=1;
+        dp_0=0;
+        dp_1=a[1];
+        int max2=-1;
+        for(int i=3;i<=all;i++){
+            max2=Math.max(dp_1,dp_0+a[i-1]);
+            dp_0=dp_1;
+            dp_1=max2;
+
         }
-        int num=getmoney(c);
-        for (int i=0;i<b.length-1;i++){
-            c[i]=b[i];
-        }
-        return Math.max(num,getmoney(c));
+        return Math.max(max1,max2);
+
     }
     public static void main(String [] wea){
         int num[]={2,7,9,3,1};
