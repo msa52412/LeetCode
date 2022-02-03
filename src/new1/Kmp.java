@@ -43,5 +43,34 @@ public class Kmp {
 		
 		
 	}
+	public int strStr(String haystack, String needle) {
+		int n=haystack.length(),m=needle.length();
+		if(m==0) return 0;
+		int[][] dp=getArray(needle);
+
+		int j=0;
+		for(int i=0;i<n;i++){
+			j=dp[j][haystack.charAt(i)-'a'];
+			if(j==m) return i-m+1;
+		}
+		return -1;
+
+	}
+	public int[][] getArray(String p){
+		int m=p.length();
+		int[][] dp=new int[m][26];
+		dp[0][p.charAt(0)-'a']=1;
+		int x=0;
+		for(int j=1;j<m;j++){
+			for(int i=0;i<26;i++){
+				if(p.charAt(j)-'a'==i){
+					dp[j][i]=j+1;
+				}
+				else dp[j][i]=dp[x][i];
+			}
+			x=dp[x][p.charAt(j)-'a'];
+		}
+		return dp;
+	}
 
 }
