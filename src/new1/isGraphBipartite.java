@@ -7,9 +7,9 @@ public class isGraphBipartite {
     private static final int uncolor=0;
     private static final int red=1;
     private static final int green=2;
-    private int[] color;
-    private boolean vaild=true;
-    public boolean isTwo(int[][] graph){
+    private static int[] color;
+    private static boolean vaild=true;
+    public static boolean isTwo(int[][] graph){
         int n=graph.length;
         color=new int[n];
         for (int i=0;i<n;i++){
@@ -19,7 +19,7 @@ public class isGraphBipartite {
         }
         return vaild;
     }
-    public void dfs(int node,int c,int [][]graph){
+    public static void dfs(int node, int c, int[][] graph){
         color[node]=c;
         int notcolor=c==red?green:red;
         for (int neighbor:graph[node]){
@@ -58,6 +58,11 @@ public class isGraphBipartite {
         }
         return true;
     }
+    public static void main(String [] a){
+        int[][] n={{1,2},{2,0},{1,0}};
+        System.out.print(isTwo(n));
+    }
+
 
 
 
