@@ -10,9 +10,15 @@ public class toStr {
         char[] chars=str.toCharArray();
         for (int i=0;i<chars.length;i++){
             if (chars[i]=='-'){
+                if (chars[i+1]>='a'&&chars[i+1]<='z'){
                 newstr+= (char) (chars[i+1]-32);
                 i++;
-                continue;
+                continue;}
+                else {
+                    newstr+=chars[i+1];
+                    i++;
+                    continue;
+                }
             }
             newstr+=chars[i];
         }
