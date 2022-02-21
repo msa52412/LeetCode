@@ -17,8 +17,4 @@ public class Robber1 {
         }
         return dp;
     }
-    public static void main(String [] aw){
-        int num[]={2};
-        System.out.print(getmoney(num));
-    }
 }
