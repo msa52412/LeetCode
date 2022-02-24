@@ -26,12 +26,6 @@ public class coucoin {
 		   }
 	   }
 	   return (dp[all]==all+1)? -1: dp[all];
-
-
-
-	
-
-	   
    }
 	 
 
