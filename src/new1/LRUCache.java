@@ -23,16 +23,14 @@ public class LRUCache {
         Node x= new Node(key,val);
         if (map.containsKey(key)){
             cache.remove(map.get(key));
-            cache.addFirst(x);
-            map.put(key,x);
         }
         else {
             if (cap==cache.size()){
                 Node last= (Node) cache.removeLast();
                 map.remove(last.key);
             }
-            cache.addFirst(x);
-            map.put(key,x);
         }
+        cache.addFirst(x);
+        map.put(key,x);
     }
 }

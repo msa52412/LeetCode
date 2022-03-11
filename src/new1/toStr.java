@@ -3,9 +3,11 @@ package new1;
 import java.util.Scanner;
 
 public class toStr {
-    public static void main(String[] a){
+
+    public static void main(String yvj[]){
         Scanner sc=new Scanner(System.in);
         String str=sc.next();
+
         String newstr="";
         char[] chars=str.toCharArray();
         for (int i=0;i<chars.length;i++){
@@ -23,5 +25,6 @@ public class toStr {
             newstr+=chars[i];
         }
         System.out.print(newstr);
+        
     }
 }
