@@ -28,4 +28,12 @@ public class nAryTreePreorderTraversal {
         }
         return res;
     }
+    public List<Integer> post(Node root){
+        if (root==null) return res;
+        for (Node r:root.children){
+            post(r);
+        }
+        res.add(root.val);
+        return res;
+    }
 }
