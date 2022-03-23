@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 public class LRUCache {
+    class Node {
+        public int key,val;
+        public new1.Node next,prev;
+        public Node(int k,int v){this.key=k;this.val=v;}
+    }
     private HashMap<Integer,Node> map;
     private LinkedList cache;
     private int cap;
