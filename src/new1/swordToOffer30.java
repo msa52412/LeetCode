@@ -1,7 +1,6 @@
 package new1;
 
-import java.util.LinkedList;
-import java.util.Stack;
+import java.util.*;
 
 public class swordToOffer30 {
     Stack<Integer> stack1;
@@ -23,4 +22,5 @@ public class swordToOffer30 {
     public int min(){
         return stack2.peek();
     }
+
 }
