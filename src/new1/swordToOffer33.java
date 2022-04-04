@@ -1,6 +1,6 @@
 package new1;
 
-import java.util.Objects;
+import java.util.*;
 
 public class swordToOffer33 {
     int end;
@@ -46,5 +46,20 @@ public class swordToOffer33 {
 
     public static void main(String[] args) {
         call(new String[]{"5","2","C","D","+"});
+    }
+    public List<Integer> get(int l, int r){
+        List<Integer> res=new ArrayList<>();
+        for (int i=l;i<=r;i++){
+            if (is(i)) res.add(i);
+        }
+        return res;
+    }
+    public boolean is(int m){
+        int k=m;
+        while (k>0){
+            if (k%10==0||m%(k%10)!=0) return false;
+            k/=10;
+        }
+        return true;
     }
 }
