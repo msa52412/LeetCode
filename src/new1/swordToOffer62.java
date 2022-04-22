@@ -51,6 +51,15 @@ public class swordToOffer62 {
         }
         return ress;
     }
+    public double max(double[] price){
+        double min=Integer.MAX_VALUE;
+        double res=Integer.MIN_VALUE;
+        for (double m:price){
+            min=Math.min(min,m);
+            res=Math.max(res,m-min);
+        }
+        return res;
+    }
 
     public static void main(String[] args) {
         count(new int[]{1,2,3,4,5});

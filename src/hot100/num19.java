@@ -1,6 +1,9 @@
 package hot100;
 
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Scanner;
 
 public class num19 {
     public ListNode remove(ListNode head,int n){
@@ -28,4 +31,5 @@ public class num19 {
         head1.next=head1.next.next;
         return pre;
     }
+
 }
