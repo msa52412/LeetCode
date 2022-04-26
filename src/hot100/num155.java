@@ -24,37 +24,4 @@ public class num155 {
     public int getMin(){
         return minStack.peek();
     }
-    public ListNode get(ListNode heada,ListNode headb){
-        ListNode a=heada,b=headb;
-        while (a!=null&&b!=null){
-            a=a.next;
-            b=b.next;
-        }
-        if (a==null){
-            a=headb;
-            while (a!=null&&b!=null){
-                a=a.next;
-                b=b.next;
-            }
-            b=heada;
-            while (a!=b){
-                a=a.next;
-                b=b.next;
-            }
-            return a;
-        }
-        else {
-            b=heada;
-            while (a!=null&&b!=null){
-                a=a.next;
-                b=b.next;
-            }
-            a=headb;
-            while (a!=b){
-                a=a.next;
-                b=b.next;
-            }
-            return a;
-        }
-    }
 }
