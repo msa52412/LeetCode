@@ -1,5 +1,7 @@
 package hot100;
 
+import java.util.*;
+
 public class num200 {
     public int num(char[][] grid){
         this.grid=grid;
